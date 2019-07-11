@@ -1,0 +1,246 @@
+body 
+{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	
+	background-image: url("http://localhost/rpg/style/bgDragons.png");
+	background-repeat:no-repeat;
+	
+}
+
+#content 
+{
+	width: auto;
+	height: auto;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding: 2px;
+	
+	text-align: center;
+
+
+}
+
+
+/** REGISTER form **/
+#registerForm
+{
+	width: 620px;
+	height: 520px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	/** zaograglic background formularza  ogolnie go podrasowac**/
+	padding-top: 20px;
+	
+	background: rgba(105,105,105, 0.6); 
+	
+    border-style: solid;      
+}
+#register
+{
+	font-family: 'Noto Serif', serif;
+    font-size: 25px;
+	margin: 8px;
+}
+#email
+{
+	margin: 0px;
+}
+#statute
+{
+	height: 25px;
+	width: 25px;
+	
+}
+
+.formContainer
+{
+
+	text-align: center;
+}
+.formContainer input
+{
+	background-color: #000000;
+	color: white;
+	font-size: 30px;
+	letter-spacing: 2px;
+
+}
+
+/** LOGIN form **/
+
+#loginForm
+{
+	width: 620px;
+	height: 330px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	/** zaograglic background formularza  ogolnie go podrasowac**/
+	padding-top: 15px;
+	
+	background: rgba(105,105,105, 0.6); 
+	
+    border-style: solid;      
+}
+
+.note
+{
+	
+	width: 240px;
+	color: white;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	background: black;
+}
+	/** Player Stats Table **/
+table, tr, td /** table, th, td**/
+{
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	width:20%;
+	border: 7px solid #AB9F9D;
+	letter-spacing: 1px;
+	
+}
+
+td
+{
+	border: 7px  groove #B07062;
+	background-color: #0A0A0A;
+}
+
+
+p
+{
+	
+	color: #ffffff;
+	font-weight:bold;
+	font-size: 15px;
+}
+
+
+#shop input
+{
+	
+	margin-top: 14px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 240px;
+	border: 7px  groove #B07062;
+}
+
+.info /** after buy strength in shop**/
+{
+	background-color: grey;
+	color: #ffffff;
+	font-weight:bold;
+	font-size: 45px;
+	margin-top: 254px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border: 7px  groove #B07062;
+}
+
+#header
+{
+	height: 20px;
+	margin-right: 51px;
+	text-align: right;
+	
+	
+}
+
+.button 
+{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+ 
+}
+
+#footer
+{
+	
+  position: fixed;
+  left: 0;
+  bottom:0;
+  height: 60px;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  border-style: dotted;
+
+
+}
+h4
+{	
+	
+
+	font-size: 20px;
+	color: #ffffff;
+
+
+	
+}
+h3 
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+
+	color: #DCDCDC;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 50px;
+	
+	
+}
+
+
+::-webkit-input-placeholder 
+{ 
+	/** dodac jakies fonty z google**/
+  font-family: 'Noto Serif', serif;
+  font-size: 25px;
+}
+
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: #00FFFF;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+

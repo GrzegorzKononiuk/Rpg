@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	
+<div id="header">
+  
+  <a href="logout.php" class="button">Logout</a>
+
+</div>
+
+<div id="content">
+		
+		<script src="scenes/world.js"></script>
+		<script src="scenes/battle.js"></script>
+		<script src="scenes/house.js"></script>
+		<script src="scenes/bossCave.js"></script>
+		<script src="scenes/start.js"></script>
+		
+ <div id="PlayerStats">
+
+  <script>
+			
+	  var sesion = "<?php echo $_SESSION['user_id'] ?>";
+	  xmlhttp=new XMLHttpRequest();
+	  
+	  xmlhttp.onreadystatechange=function() 
+	  {
+		if (this.readyState==4 && this.status==200) 
+		{
+			var txt='';
+			myObj = JSON.parse(this.responseText);
+		
+			txt += "<div id='statsTable'><table>"
+			
+			for (x in myObj) 
+			{
+			  
+			  txt += "<tr><td>" + "User: "     + myObj[x].username + "</td></tr>";
+			  txt += "<tr><td>" + "Strength: " + myObj[x].strength + "</td></tr>";
+			  txt += "<tr><td>" + "Health: "   + myObj[x].health + "</td></tr>";
+			  txt += "<tr><td>" + "Exp: "      + myObj[x].exp + "</td></tr>";
+			}
+			
+			  txt += "</table></div>" 
+		
+		
+			  document.getElementById("PlayerStats").innerHTML=txt;
+		}
+	  }
+	  xmlhttp.open("GET","http://rpg/api/users/"+sesion,true);
+	  xmlhttp.send();
+		 
+  </script>
+		 
+ </div>
+
+ <div id="shop">
+
+	<form action='shop.php' method='POST'>
+		
+		<input id="button" disabled="disabled" type='submit' name='buy' value='BUY STRENGTH +5 (-5 exp)'> <br />
+		<input type='radio' name='strength' value="5"><br />
+		
+		<script>
+			$("input:radio").change
+			(function () 
+				{
+					$("#button").prop("disabled", false);
+				}
+			);
+		</script>
+		
+	</form>
+			
+ </div>	
+
+
+</div>
+
+ <div id="footer">
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies porttitor varius. Integer tempus turpis in purus mattis, et interdum dolor commodo. Ut maximus, tellus sed mollis dapibus, ligula risus feugiat dui, quis posuere nulla turpis quis felis. Duis mauris risus, maximus ac velit eget, consequat volutpat est. Sed interdum mi eget ex laoreet, nec tristique magna mollis.</p>
+ 
+ </div>
+
+</body>
+</html>
+
+
+
